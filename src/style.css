@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
 
 .container{
   display: grid;
@@ -20,21 +24,19 @@ header{
 }
 
 main {
-  background-color: #FFF7E0;
+  background-color: #ffffff;
   grid-row: 2 / 3;
   grid-column: 1 / -1; /* ocupa tudo */
   display: flex;
   justify-content: start;
 }
 
-/* FOOTER EMBAIXO */
 footer{
   background-color: #d67b3e;
   grid-row: 3 / 4;
   grid-column: 1 / 7;
 }
 
-/* ESTILOS EXTRAS */
 h1{
   margin-left: 20px;
   color: #FBB87B;
@@ -59,11 +61,79 @@ p{
 }
 
 .link{
-  margin-left: 250px; /* joga o nav pra direita */
+  margin-left: 250px;
   display: flex;
   gap: 30px;
 }
 
 .Psq{
-  margin-left: 200px;
+  margin-left: 250px;
+}
+
+a{
+  color: #d67b3e;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header a:hover {
+  color: #ee9e68;
+  transform: scale(1.1);
+}
+
+.img{
+  position: relative;
+
+}
+
+/* Container */
+.Psq {
+  display: flex;
+  align-items: center;
+  background: #614437;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+/* Input */
+.Psq input {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 30px;
+  width: 200px;
+  font-size: 14px;
+  color: #db8c8c;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Botão */
+.Psq button {
+  background: #e28a4f;
+  border: none;
+  color: #fdd5bb;
+  padding: 10px 15px;
+  border-radius: 10%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+/* Foco */
+.Psq:focus-within {
+  box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
+}
+
+/* Placeholder */
+.Psq input::placeholder {
+  color: #d67b3e;
+}
+
+/* Efeito hover geral */
+.Psq:hover {
+  transform: scale(1.02);
 }
