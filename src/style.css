@@ -21,6 +21,7 @@ header{
   grid-column: 1 / 7;
   display: flex;
   align-items: center;
+  position: static;
 }
 
 main {
@@ -29,26 +30,32 @@ main {
   grid-column: 1 / -1; /* ocupa tudo */
   display: flex;
   justify-content: start;
+  height: 100%;
+  width: 100%;
+  
 }
 
 footer{
   background-color: #d67b3e;
   grid-row: 3 / 4;
   grid-column: 1 / 7;
+  height: 200px;
+  position: static;
 }
 
 h1{
-  margin-left: 20px;
+  margin-left: 150px;
   color: #FBB87B;
-}
-
-.txt{
-  margin-top: 20px;
-  margin-left: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 h2{
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  color: #64402f;
+  left: 100px;
 }
 
 .Logo{
@@ -57,7 +64,7 @@ h2{
 }
 
 p{
-  margin-bottom: 11px;
+  margin-bottom: 10px;
 }
 
 .link{
@@ -83,11 +90,10 @@ header a:hover {
 }
 
 .img{
-  position: relative;
+  height: 1000px;
 
 }
 
-/* Container */
 .Psq {
   display: flex;
   align-items: center;
@@ -98,7 +104,6 @@ header a:hover {
   transition: 0.3s;
 }
 
-/* Input */
 .Psq input {
   border: none;
   outline: none;
@@ -110,7 +115,6 @@ header a:hover {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Botão */
 .Psq button {
   background: #e28a4f;
   border: none;
@@ -121,19 +125,138 @@ header a:hover {
   transition: 0.3s;
 }
 
-
-
-/* Foco */
 .Psq:focus-within {
   box-shadow: 0 0 0 3px rgba(0, 120, 212, 0.2);
 }
 
-/* Placeholder */
+
 .Psq input::placeholder {
   color: #d67b3e;
 }
 
-/* Efeito hover geral */
 .Psq:hover {
   transform: scale(1.02);
+}
+
+.infc{
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+}
+
+.inf{
+  background-color: #d67b3e;
+  height: 50px;
+  width: 400px;
+  position: relative;
+  top: 50px;
+  left: 150px;
+  color: #ffffff;
+}
+
+.produtos-container {
+  display: flex;
+  gap: 150px;
+  justify-content: center;
+  flex-wrap: wrap; /* quebra no mobile */
+  padding: 20px;
+}
+
+.produto-card {
+  width: 200px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.produto-imagem {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.produto-nome {
+  font-size: 16px;
+  margin: 0;
+}
+
+.produto-preco {
+  font-weight: bold;
+  color: #e09c1d;
+}
+
+.produto-botao {
+  background: #e08721;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.produto-botao:hover {
+  background: #d67b3e;
+}
+
+.pagina {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* CARD DE LOCALIZAÇÃO (ESQUERDA) */
+.localizacao-card {
+  width: 700px;
+  background: #ffefe4;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+  left: 170px;
+}
+
+.localizacao-card h2 {
+  margin-top: 0;
+  color: #302520;
+}
+
+.localizacao-card p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.localizacao-card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #ffaf54;
+  color: white;
+  cursor: pointer;
+}
+
+.localizacao-card button:hover {
+  background: #e09c1d;
+}
+
+iframe{
+  position: relative;
+  left: 230px;
+  border-radius: 10px;
 }
